@@ -1,0 +1,21 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "normalize.css": {},
+      "slick": {}
+    },
+    "packages": {
+      "normalize.css": {
+        "git": "https://github.com/rithis/meteor-normalize.css",
+        "tag": "v2.0.1",
+        "commit": "671aba13223dd7d7ec1d26a6b2461943d7c4fa18"
+      },
+      "slick": {
+        "git": "https://github.com/lourd/slick.git",
+        "tag": "v0.1.4",
+        "commit": "3acaac6271d6828f365a65a8cb2a13f47220e929"
+      }
+    }
+  }
+}
