@@ -1,0 +1,34 @@
+.page-home {
+  background: #FCE7B8;
+}
+h1 {
+  color: #76BEB0;
+}
+p {
+  color: #292522;
+  text-align: center;
+}
+.page-home a {
+  margin: 0 0 0 50%;
+  padding: 15px;
+  display: inline-block;
+  background: #76BEB0;
+  color: #292522;
+  text-decoration: none;
+}
+
+#page-password {
+  background: #F6C082;
+}
+
+#page-sauce {
+  background: #F89B62;
+}
+
+#page-test {
+  background: #FF785B;
+}
+
+#page-faq {
+  background: #97BFB7;
+}
