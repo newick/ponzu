@@ -10,9 +10,6 @@ Template.tplTests.soluce = function () {
   return "no";
 };
 
-Template.tplTests.services = function () {
-  return nameByIndex(Services, Session.get("indexService"));
-};
 
 Template.tplTests.currentSauce = function () {
   return nameByIndex(Sauces, Session.get("indexSauce"));
@@ -23,11 +20,19 @@ Template.tplTests.currentPassword = function () {
 };
 
 Template.tplTests.currentService = function() {
-  var index = Session.get("indexService");
-  var currentService = "";
-
-  if (Services.find().fetch()[index])
-    currentService = Services.find().fetch()[index].name;
-
-  return currentService;
+  return nameByIndex(Services, Session.get("indexService"));
 };
+
+Template.tplTests.events({
+  'submit form': function (event) {
+    var userPassword = $('input#userPassword').val();
+    var soluce = $('input#soluce').val();
+    
+    event.preventDefault();
+    
+    if (userPassword === soluce)
+      alert("PANZER PONZU");
+    else
+      alert("boulette");
+  }
+});
