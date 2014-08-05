@@ -1,3 +1,3 @@
 Template.tplSauces.sauces = function () {
-  return 'polop';
+  return Sauces.find();
 };

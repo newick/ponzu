@@ -4,7 +4,9 @@
     <p>Il est temps d'agrémenter tout ça</p>
     <p>Choisis une des sauces suivantes, ou crée la tienne</p>
     <div class="carousel">
-      
+      {{#each sauces}}
+        {{> tplSauce}}
+      {{/each}}
     </div>
   </div> 
 </template>
