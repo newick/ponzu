@@ -4,11 +4,11 @@ Template.tplPasswords.passwords = function () {
 
 Template.tplPasswords.currentPassword = function () {
   var index = Session.get("indexPassword");
-  var currentPassword = Passwords.find().fetch()[index];
+  var currentPassword = Passwords.find().fetch()[index].name || "";
   
-  $("input").val(currentPassword.name);
+  $("input").val(currentPassword);
   
-  return currentPassword.name;
+  return currentPassword;
 };
 
 Template.tplPasswords.events({
