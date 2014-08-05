@@ -8,7 +8,7 @@ Template.tplPasswords.currentPassword = function () {
   
   $("input").val(currentPassword.name);
   
-  return currentPassword.name || "";
+  return currentPassword.name;
 };
 
 Template.tplPasswords.events({
