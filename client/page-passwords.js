@@ -31,4 +31,3 @@ Template.tplPasswords.events({
     Session.set("indexPassword", index);
   },
  });
-
