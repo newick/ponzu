@@ -1,17 +1,26 @@
-Pwgen = function (type, password, service) {
-  this.type = type;
+Pwgen = function (sauce, password, service) {
+  this.sauce = sauce;
   this.password = password; 
   this.service = service;
   
   this.methods = {
-    soya: this.simpleMeth,
+    terryaki: this.simpleMeth,
   };
 }
+
+Pwgen.prototype.isSauce = function () {
+  var self = this;
+  
+  if (_.indexOf(_.keys(self.methods), self.sauce) === -1)
+    return false;
+  
+  return true;
+};
 
 Pwgen.prototype.gen = function () {
   var self = this;
   
-  return self.methods[self.type](this);
+  return self.methods[self.sauce](this);
 }
 
 Pwgen.prototype.simpleMeth = function (self) {

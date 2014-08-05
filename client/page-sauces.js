@@ -3,13 +3,7 @@ Template.tplSauces.sauces = function () {
 };
 
 Template.tplSauces.currentSauce = function () {
-  var index = Session.get('indexSauce');
-  var currentSauce = "";
-  
-  if (Sauces.find().fetch()[index])
-    currentSauce = Sauces.find().fetch()[index].name;
-
-  return currentSauce;
+  return nameByIndex(Sauces, Session.get("indexSauce"));
 };
 
 Template.tplSauces.events({
