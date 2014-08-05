@@ -10,4 +10,10 @@ Meteor.startup(function(){
   sauces.forEach(function (sauce) {
     Sauces.insert(sauce);
   });
+  
+  Services.remove({});
+  
+  services.forEach(function (service) {
+    Services.insert(service);
+  });
 });
