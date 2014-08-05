@@ -1,4 +1,4 @@
-Methods = function (type, password, service) {
+Pwgen = function (type, password, service) {
   this.type = type;
   this.password = password; 
   this.service = service;
@@ -8,13 +8,13 @@ Methods = function (type, password, service) {
   };
 }
 
-Methods.prototype.gen = function () {
+Pwgen.prototype.gen = function () {
   var self = this;
   
   return self.methods[self.type](this);
 }
 
-Methods.prototype.simpleMeth = function (self) {
+Pwgen.prototype.simpleMeth = function (self) {
   var password = [];
   
   password.push(self.service.substr(-2));
