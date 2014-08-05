@@ -1,7 +1,7 @@
-Template.password.name = function () {
+Template.tplPassword.name = function () {
   return this.name;
 }
 
-Template.password.rendered = function() {
+Template.tplPassword.rendered = function() {
   $('.carousel').slick();
 }

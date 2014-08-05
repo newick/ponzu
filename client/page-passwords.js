@@ -1,3 +1,3 @@
-Template.passwords.passwords = function () {
+Template.tplPasswords.passwords = function () {
   return Passwords.find();
 };
