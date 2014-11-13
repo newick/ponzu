@@ -10,6 +10,28 @@ Template.tplTests.soluce = function () {
   return "no";
 };
 
+Template.tplTests.events({
+
+  'click .next': function (event) {
+
+    var index = Session.get("indexService") + 1;
+
+    if (index === Services.find().count())
+      index = 0;
+
+    Session.set("indexService", index);
+  },
+
+  'click .prev': function (event) {
+    var index = Session.get("indexService") - 1;
+
+    if (index < 0)
+      index = Services.find().count() - 1;
+
+    Session.set("indexService", index);
+  },
+});
+
 
 Template.tplTests.currentSauce = function () {
   return nameByIndex(Sauces, Session.get("indexSauce"));

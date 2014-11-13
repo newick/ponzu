@@ -1,10 +1,9 @@
-Template.tplSauces.sauces = function () {
-  return Sauces.find();
-};
-
-Template.tplSauces.currentSauce = function () {
-  return nameByIndex(Sauces, Session.get("indexSauce"));
-};
+Template.tplSauces.helpers({
+  sauces: function () { return Sauces.find(); },
+  currentSauce: function () {
+    return nameByIndex(Sauces, Session.get("indexSauce"));
+  }
+});
 
 Template.tplSauces.events({
 
