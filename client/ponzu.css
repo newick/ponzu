@@ -38,6 +38,7 @@ body {
   font: 1em "",Arial,sans-serif;
 }
 h1, .h1 {
+  margin-bottom: 10px;
   text-align: center;
   font-size: 3em;
 }
@@ -54,7 +55,8 @@ h5, .h5 {
 
 }
 .wrapper {
-  width: 980px;
+  padding: 0 10px;
+  width: 480px;
   margin: 0 auto;
 }
 /* === /Common === */
@@ -69,14 +71,24 @@ h5, .h5 {
 /*=== Pages === */
 section {
   padding: 0px;
- /* overflow-y:auto;
-  height:100vh;
-  min-height: 160px;*/
+  margin-bottom: 40px;
+}
+form,
+input[type="text"] {
+  text-align: center;
+}
+input[type="text"] {
+  width: 400px;
+}
+ul {
+  text-align: left;  
+}
+li {
+  margin-bottom: 10px;
+}
+.sauce-explaination {
+  padding: 10px;  
+  border: 1px solid #000;
 }
 /*=== /Pages === */
 
-/*Carousel*/
-.slick-prev,
-.slick-next{
-  background: #000;
-}
