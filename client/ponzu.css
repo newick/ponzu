@@ -115,5 +115,8 @@ li {
   background: #f04124;
   color: #fff;
 }
+#page-faq p {
+  text-align: left;
+}
 /*=== /Pages === */
 
