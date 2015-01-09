@@ -77,8 +77,22 @@ form,
 input[type="text"] {
   text-align: center;
 }
+form {
+  position: relative;
+}
+form button {
+  position: absolute;
+}
+form .prev {
+  left: 0;
+}
+form .next,
+form button[type="submit"] {
+  right: 0;
+  top: 0;
+}
 input[type="text"] {
-  width: 400px;
+  width: 100%;
 }
 ul {
   text-align: left;  
