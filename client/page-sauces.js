@@ -8,8 +8,9 @@ Template.tplSauces.helpers({
 Template.tplSauces.events({
 
   'click .next': function (event) {
-
     var index = Session.get("indexSauce") + 1;
+
+    event.preventDefault();
 
     if (index === Sauces.find().count())
       index = 0;
@@ -19,6 +20,8 @@ Template.tplSauces.events({
 
   'click .prev': function (event) {
     var index = Session.get("indexSauce") - 1;
+
+    event.preventDefault();
 
     if (index < 0)
       index = Sauces.find().count() - 1;
