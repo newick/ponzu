@@ -104,5 +104,16 @@ li {
   padding: 10px;  
   border: 1px solid #000;
 }
+.result {
+  padding: 10px 0;
+}
+.valid {
+  background: #43AC6A;
+  color: #fff;
+}
+.invalid {
+  background: #f04124;
+  color: #fff;
+}
 /*=== /Pages === */
 

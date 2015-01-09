@@ -3,10 +3,10 @@ Template.tplTests.soluce = function () {
   var sauce = nameByIndex(Sauces, Session.get("indexSauce"));
   var service = nameByIndex(Services, Session.get("indexService"));
   var soluce = new Pwgen(sauce, password, service);
-  
+
   if (soluce.isSauce())
     return soluce.gen();
-  
+
   return "no";
 };
 
@@ -49,12 +49,15 @@ Template.tplTests.events({
   'submit form': function (event) {
     var userPassword = $('input#userPassword').val();
     var soluce = $('input#soluce').val();
-    
+
     event.preventDefault();
-    
-    if (userPassword === soluce)
-      alert("PANZER PONZU");
-    else
-      alert("boulette");
+
+    if (userPassword === soluce) {
+      $(".result").html("Bien joué, tu as tout compris !");
+      $(".result").addClass("valid");
+    } else {
+      $(".result").html("Ce n'est pas ça, essaye encore !");
+      $(".result").addClass("invalid")
+    }
   }
 });
