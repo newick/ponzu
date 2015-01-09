@@ -1,8 +1,13 @@
+var sauces = [
+  {name: "terryaki"},
+  {name: "soy"},
+];
+
+
 Template.tplSauces.helpers({
-  sauces: function () { return Sauces.find(); },
   currentSauce: function () {
-    return nameByIndex(Sauces, Session.get("indexSauce"));
-  }
+    return sauces[Session.get("indexSauce")].name;
+  },
 });
 
 Template.tplSauces.events({
@@ -12,7 +17,7 @@ Template.tplSauces.events({
 
     event.preventDefault();
 
-    if (index === Sauces.find().count())
+    if (index === sauces.length)
       index = 0;
 
     Session.set("indexSauce", index);
@@ -24,7 +29,7 @@ Template.tplSauces.events({
     event.preventDefault();
 
     if (index < 0)
-      index = Sauces.find().count() - 1;
+      index = sauces.length - 1;
 
     Session.set("indexSauce", index);
   },
