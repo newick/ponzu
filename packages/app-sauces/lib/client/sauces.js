@@ -1,16 +1,10 @@
-var sauces = [
-  {name: "terryaki"},
-  {name: "soy"},
-];
-
-
-Template.tplSauces.helpers({
+Template.sauceWidget.helpers({
   currentSauce: function () {
     return sauces[Session.get("indexSauce")].name;
   },
 });
 
-Template.tplSauces.events({
+Template.sauceWidget.events({
 
   'click .next': function (event) {
     var index = Session.get("indexSauce") + 1;

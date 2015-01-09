@@ -1,0 +1,8 @@
+<template name="sauceWidget">
+  <form role="form">
+    <button class="prev">&lt;</button>
+    <span class="currentSauce">{{currentSauce}}</span>
+    <button class="next">&gt;</button>
+  </form>
+  <p class="sauce-explaination">{{> Template.dynamic template=currentSauce}}</p>
+</template>

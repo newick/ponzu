@@ -3,11 +3,6 @@
     <h2>2 - Ajoute ta sauce</h2>
     <p>Il est temps d'agrémenter tout ça</p>
     <p>Choisis une des sauces suivantes, ou crée la tienne</p>
-    <form role="form">
-      <button class="prev">&lt;</button>
-      <span class="currentSauce">{{currentSauce}}</span>
-      <button class="next">&gt;</button>
-    </form>
-    <p class="sauce-explaination">{{> Template.dynamic template=currentSauce}}</p>
+    {{> sauceWidget}}
   </div>
 </template>
