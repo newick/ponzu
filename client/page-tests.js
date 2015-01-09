@@ -54,7 +54,12 @@ Template.tplTests.events({
 
     if (userPassword === soluce) {
       $(".result").html("Bien joué, tu as tout compris !");
+      
+      if ($(".result").hasClass(".invalid"))
+        $(".result").removeClass(".invalid");
+
       $(".result").addClass("valid");
+
     } else {
       $(".result").html("Ce n'est pas ça, essaye encore !");
       $(".result").addClass("invalid")
