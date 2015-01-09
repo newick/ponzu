@@ -26,5 +26,5 @@ Template.passwordsWidget.events({
       index = passwords.length - 1;
 
     Session.set("indexPassword", index);
-  },
+  }
 });

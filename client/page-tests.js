@@ -1,17 +1,4 @@
 Template.tplTests.helpers({
-  soluce:function () {
-    var password = nameByIndex(Passwords, Session.get("indexPassword"));
-    var sauce = nameByIndex(Sauces, Session.get("indexSauce"));
-    var service = nameByIndex(Services, Session.get("indexService"));
-    var soluce = new Pwgen(sauce, password, service);
-
-    if (soluce.isSauce()) {
-      return soluce.gen();
-    }
-
-    return "no";
-  },
-
   currentSauce: function () {
     return nameByIndex(Sauces, Session.get("indexSauce"));
   },
@@ -52,16 +39,21 @@ Template.tplTests.events({
   },
 
   'submit form': function (event) {
+    var password = $('input.password').val();
+    var sauce = nameByIndex(Sauces, Session.get("indexSauce"));
+    var service = nameByIndex(Services, Session.get("indexService"));
+    var soluce = new Pwgen(sauce, password, service);
     var userPassword = $('input#userPassword').val();
-    var soluce = $('input#soluce').val();
 
     event.preventDefault();
 
-    if (userPassword === soluce) {
+    console.log("userPassword", userPassword)
+    console.log("soluce", soluce.gen())
+
+    if (userPassword === soluce.gen()) {
       $(".result").removeClass("invalid");
       $(".result").html("Bien joué, tu as tout compris !");
       $(".result").addClass("valid");
-
     } else {
       $(".result").html("Ce n'est pas ça, essaye encore !");
       $(".result").addClass("invalid")
