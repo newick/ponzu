@@ -2,12 +2,7 @@
   <div class="wrapper">
     <h2>3 - Goûter</h2>
     <p>Tu peux tester si c'est l'ensemble est à ton goût</p>
-    <h3>Choisis ton service</h3>
-    <form role="form">
-      <button class="prev">&lt;</button>
-      <input type="text" class="currentService" value="{{currentService}}">
-      <button class="next">&gt;</button>
-    </form>
+    {{> tplServices}}
     <h3>Teste le</h3>
     <form role="form">
       <input type="text" id="userPassword">
