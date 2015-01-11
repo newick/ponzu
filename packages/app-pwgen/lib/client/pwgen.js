@@ -4,7 +4,7 @@ Pwgen = function (sauce, password, service) {
   this.service = service;
 
   this.methods = {
-    terryaki: this.teriyakiMeth,
+    teriyaki: this.teriyakiMeth,
     soy: this.soyMeth,
   };
 }
@@ -21,7 +21,7 @@ Pwgen.prototype.isSauce = function () {
 Pwgen.prototype.gen = function () {
   var self = this;
 
-  return self.methods[self.sauce](this);
+  return self.methods[self.sauce](self);
 }
 
 Pwgen.prototype.teriyakiMeth = function (self) {

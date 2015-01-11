@@ -2,7 +2,7 @@ Template.tplPasswords.helpers({
   context: function () {
     return {
       sessionName: "indexPassword",
-      class: "password",
+      class: "currentPassword",
       choices: ["qwerty", "azerty"]
     };
   }

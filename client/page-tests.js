@@ -1,54 +1,19 @@
-Template.tplTests.helpers({
-  currentSauce: function () {
-    return nameByIndex(Sauces, Session.get("indexSauce"));
-  },
-
-  currentPassword: function () {
-    return nameByIndex(Passwords, Session.get("indexPassword"));
-  },
-
-  currentService: function() {
-    return nameByIndex(Services, Session.get("indexService"));
-  }
-});
-
 Template.tplTests.events({
-
-  'click .next': function (event) {
-    var index = Session.get("indexService") + 1;
-
-    event.preventDefault();
-
-    if (index === Services.find().count()) {
-      index = 0;
-    }
-
-    Session.set("indexService", index);
-  },
-
-  'click .prev': function (event) {
-    var index = Session.get("indexService") - 1;
-
-    event.preventDefault();
-
-    if (index < 0) {
-      index = Services.find().count() - 1;
-    }
-
-    Session.set("indexService", index);
-  },
-
   'submit form': function (event) {
-    var password = $('input.password').val();
-    var sauce = nameByIndex(Sauces, Session.get("indexSauce"));
-    var service = nameByIndex(Services, Session.get("indexService"));
+    var password = $('input.currentPassword').val();
+    var sauce = $('span.currentSauce').html();
+    var service = $('input.currentService').val();
     var soluce = new Pwgen(sauce, password, service);
     var userPassword = $('input#userPassword').val();
 
     event.preventDefault();
 
-    console.log("userPassword", userPassword)
+    console.log("password", password)
+    console.log("sauce", sauce)
+    console.log("service", service)
+
     console.log("soluce", soluce.gen())
+    console.log("userPassword", userPassword)
 
     if (userPassword === soluce.gen()) {
       $(".result").removeClass("invalid");

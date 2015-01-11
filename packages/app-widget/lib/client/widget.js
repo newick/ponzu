@@ -23,6 +23,9 @@ Template.widget.helpers({
     randomByDefault(this.context);
 
     return this.context.choices[Session.get(this.context.sessionName)];
+  },
+  class: function () {
+    return this.context.class;
   }
 });
 
