@@ -3,7 +3,7 @@ Template.tplPasswords.helpers({
     return {
       sessionName: "indexPassword",
       class: "currentPassword",
-      choices: ["qwerty", "azerty"]
+      choices: ["qwerty", "azerty", "grostrol"]
     };
   }
 });

@@ -3,7 +3,7 @@ Template.tplServices.helpers({
     return {
       sessionName: "indexServices",
       class: "currentService",
-      choices: ["kiva", "twitter", "duckduckgo", "github"]
+      choices: ["kiva", "twitter", "duckduckgo", "github", "zillow"]
     };
   }
 });
