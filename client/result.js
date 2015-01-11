@@ -1,4 +1,4 @@
-Template.tplTests.events({
+Template.tplResult.events({
   'submit form': function (event) {
     var password = $('input.currentPassword').val();
     var sauce = $('span.currentSauce').html();
@@ -8,12 +8,7 @@ Template.tplTests.events({
 
     event.preventDefault();
 
-    console.log("password", password)
-    console.log("sauce", sauce)
-    console.log("service", service)
-
     console.log("soluce", soluce.gen())
-    console.log("userPassword", userPassword)
 
     if (userPassword === soluce.gen()) {
       $(".result").removeClass("invalid");
