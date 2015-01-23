@@ -5,8 +5,8 @@ Pwgen = function (sauce, password, service) {
 
   this.methods = {
     teriyaki: this.teriyakiMeth,
-    soy: this.soyMeth,
-    rayu: this.rayuMeth,
+    soja: this.sojaMeth,
+    wasabi: this.wasabiMeth,
   };
 }
 
@@ -31,16 +31,16 @@ Pwgen.prototype.teriyakiMeth = function (self) {
   var password = [];
 
   password.push(vowels);
-  password.push("(");
+  password.push("!");
   password.push(self.password);
   password.push(consonant);
-  password.push(")");
+  password.push("&");
   password.push(self.service.substr(0, 2));
 
   return password.join('');
 };
 
-Pwgen.prototype.soyMeth = function (self) {
+Pwgen.prototype.sojaMeth = function (self) {
   var password = [];
 
   password.push(self.service.substr(-2));
@@ -50,7 +50,7 @@ Pwgen.prototype.soyMeth = function (self) {
   return password.join('');
 };
 
-Pwgen.prototype.rayuMeth = function (self) {
+Pwgen.prototype.wasabiMeth = function (self) {
   var password = [];
   var end = "";
 
