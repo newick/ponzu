@@ -1,9 +1,9 @@
 Meteor.startup(function () {
   sauces = [
+    {name: "soja"},
     {name: "teriyaki"},
-    {name: "soy"},
-    {name: "rayu"},
+    {name: "wasabi"},
   ];
 
-  Session.setDefault("indexSauce", Math.floor(Math.random() * sauces.length));
+  Session.setDefault("indexSauce", 0);
 });
