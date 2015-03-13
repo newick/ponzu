@@ -1,6 +1,6 @@
 Template.tplResult.events({
   'submit form': function (event) {
-    var password = $('input.currentPassword').val();
+    var password = Session.get('visitorPassword');
     var sauce = $('span.currentSauce').html();
     var service = $('input.currentService').val();
     var soluce = new Pwgen(sauce, password, service);

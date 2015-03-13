@@ -7,11 +7,10 @@ p {
   text-align: center;
 }
 
-.page-home a {
-  margin: 0 0 0 50%;
-  padding: 15px;
-  display: inline-block;
-  background: #76BEB0;
-  color: #292522;
-  text-decoration: none;
+iframe {
+  display: block;
+  width: 420px;
+  height: 315px;
+  margin: 0 auto;
+
 }
